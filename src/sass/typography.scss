@@ -1,0 +1,23 @@
+@use 'sass:list';
+@use 'units';
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+$header-sizes: (24pt, 20pt, 18pt, 16pt);
+
+@for $i from 1 through 4 {
+    h#{$i} {
+        font-weight: bold;
+        margin: 1ch;
+        margin-bottom: 1.5ch;
+        font-size: list.nth($header-sizes, $i);
+    }
+}
+
+p {
+    font-weight: normal;
+    margin: 1ch;
+    font-size: 12pt;
+}

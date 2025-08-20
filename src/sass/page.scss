@@ -1,0 +1,79 @@
+@use 'colors';
+@use 'units';
+
+body {
+    background-color: colors.$background;
+    color: colors.$text;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    &.equal * {
+        width: 100%;
+    }
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    &.equal * {
+        height: 100%;
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.padding {
+    @for $i from 1 through 4 {
+        &-#{$i} {
+            padding: units.$spacing-unit * $i;
+        }
+    }
+}
+
+.margin {
+    @for $i from 1 through 4 {
+        &-#{$i} {
+            margin: units.$spacing-unit * $i;
+        }
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+@media screen and (max-width: 600px) {
+    .mob-col {
+        flex-direction: column !important;
+    }
+
+    .mob-row {
+        flex-direction: row !important;
+    }
+}
+
+article img {
+    max-width: 100%;
+    @include units.round;
+}

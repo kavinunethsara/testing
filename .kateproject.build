@@ -1,0 +1,23 @@
+{
+    "Auto_generated": "This file is auto-generated. Any extra tags or formatting will be lost",
+    "target_sets": [
+        {
+            "cmake_config": "",
+            "directory": "%B",
+            "loaded_via_cmake": false,
+            "name": "New Website",
+            "targets": [
+                {
+                    "build_cmd": "",
+                    "name": "Run",
+                    "run_cmd": "pnpm run dev"
+                },
+                {
+                    "build_cmd": "toolbox run pnpm  run build",
+                    "name": "Build Command",
+                    "run_cmd": ""
+                }
+            ]
+        }
+    ]
+}

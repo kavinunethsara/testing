@@ -1,0 +1,38 @@
+$spacing-unit: 0.5em;
+$roundness-unit: $spacing-unit;
+
+$s-xsm: $spacing-unit * 0.5;
+$s-sm: $spacing-unit;
+$s-md: $spacing-unit * 2;
+$s-lg: $spacing-unit * 4;
+$s-xlg: $spacing-unit * 6;
+
+$sizes:  ('xsm':$s-xsm,'sm': $s-sm, 'md': $s-md, 'lg': $s-lg, 'xlg': $s-xlg) ;
+
+@mixin round() {
+    border-radius: $roundness-unit;
+}
+
+@mixin round-top() {
+    border-radius: 0;
+    border-top-left-radius: $roundness-unit;
+    border-top-right-radius: $roundness-unit;
+}
+
+@mixin round-bottom() {
+    border-radius: 0;
+    border-bottom-left-radius: $roundness-unit;
+    border-bottom-right-radius: $roundness-unit;
+}
+
+@mixin round-left() {
+    border-radius: 0;
+    border-top-left-radius: $roundness-unit;
+    border-bottom-left-radius: $roundness-unit;
+}
+
+@mixin round-right() {
+    border-radius: 0;
+    border-top-right-radius: $roundness-unit;
+    border-bottom-right-radius: $roundness-unit;
+}

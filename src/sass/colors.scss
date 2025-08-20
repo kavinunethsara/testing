@@ -1,0 +1,33 @@
+@use 'sass:color';
+
+@function on-color($color) {
+    $lightness: color.channel($color, 'lightness', $space: hsl);
+    @if $lightness > 50% {
+        @return black;
+    } @else {
+        @return white;
+    }
+}
+
+$accent: dodgerblue;
+$on-accent: on-color($accent);
+
+$view: rgb(27, 27, 27);
+$on-view: on-color($view);
+$background: color.adjust($view, $lightness: -50%);
+$text: on-color($background);
+
+$overlay:  rgba(20, 20, 40, 0.8);
+
+$colors: ("dark": rgb(30, 32, 32), "light": rgb(234, 238, 241),"blue": rgb(37, 123, 221), "red": rgb(230, 12, 12), "green": rgb(18, 143, 18), "purple": rgb(143, 17, 143));
+
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background-color: $color;
+        color: on-color($color);
+    }
+
+    .fg-#{$name} {
+        color: $color;
+    }
+}
