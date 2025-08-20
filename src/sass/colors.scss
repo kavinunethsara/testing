@@ -23,8 +23,8 @@ $colors: ("dark": rgb(30, 32, 32), "light": rgb(234, 238, 241),"blue": rgb(37, 1
 
 @each $name, $color in $colors {
     .bg-#{$name} {
-        background-color: $color;
-        color: on-color($color);
+        background-color: $color !important;
+        color: on-color($color) !important;
     }
 
     .fg-#{$name} {

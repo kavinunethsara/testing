@@ -59,7 +59,7 @@
 		line-height: 1.5;
 	}
 
-	.content :global(a) {
+	.content :global(a[href]) {
 		text-decoration: none;
 		font-weight: bold;
 		color: colors.$accent;
