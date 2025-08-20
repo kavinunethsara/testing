@@ -59,6 +59,12 @@
 		line-height: 1.5;
 	}
 
+	.content :global(a) {
+		text-decoration: none;
+		font-weight: bold;
+		color: colors.$accent;
+	}
+
 	.background {
 		position: absolute;
 

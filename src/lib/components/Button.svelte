@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from "svelte"
 
-    let { children, cutout = false, onActivate = () => {} }: { children: Snippet, cutout:Boolean, onActivate: Function } = $props();
+    let { children, cutout = false, onActivate = () => {} }: { children: Snippet, cutout:boolean, onActivate: Function } = $props();
 </script>
 
 <button onclick={(event) => onActivate(event)}>

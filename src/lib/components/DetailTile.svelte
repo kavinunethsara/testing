@@ -7,12 +7,12 @@
 		thumbnail,
 		aligned = true
 	}: {
-		title: String;
-		description: String;
-		color?: String;
+		title: string;
+		description: string;
+		color?: string;
 		direction?: 'left' | 'right';
-		thumbnail?: String;
-		aligned?: Boolean;
+		thumbnail?: string;
+		aligned?: boolean;
 	} = $props();
 </script>
 

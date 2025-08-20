@@ -4,7 +4,7 @@
 		subtitle = 'Subtitle',
 		thumbnail = false,
 		image = "/cover.webp",
-	}: { title?: String; subtitle?: String; thumbnail?: boolean; image ?: string } = $props();
+	}: { title?: string; subtitle?: string; thumbnail?: boolean; image ?: string } = $props();
 </script>
 
 <header>
