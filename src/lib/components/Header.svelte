@@ -63,14 +63,14 @@
 	.title {
 		margin: 0;
 		font-weight: bold;
-		font-size: 48pt;
+		font-size: 32pt;
 		letter-spacing: 0.2ch;
 	}
 
 	.subtitle {
 		margin: 0;
 		font-weight: normal;
-		font-size: 18pt;
+		font-size: 16pt;
 	}
 
 	.thumb {
