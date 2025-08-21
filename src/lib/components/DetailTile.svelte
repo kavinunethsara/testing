@@ -74,6 +74,13 @@
 			z-index: 1;
 			opacity: 0.3;
 		}
+
+		@media screen and (max-width: 800px) {
+			& {
+				flex-direction: column;
+				text-align: center !important;
+			}
+		}
 	}
 
 	.content {
