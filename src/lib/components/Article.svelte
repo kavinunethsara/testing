@@ -1,12 +1,27 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 
-	const { children }: { children: Snippet } = $props();
+	const { children, contents = false }: { children: Snippet, contents?: boolean } = $props();
+	let toc: HTMLDivElement;
+	let active: boolean = $state(false);
+
+	const toggleToc = () => {
+		active = !active;
+	}
 </script>
 
 <div class="article">
 	<div class="background"></div>
 	<div class="overlay"></div>
+	{#if contents}
+	<button class="toc-button" onclick={toggleToc}> as </button>
+	<div class={["toc", {active}]} bind:this={toc}>
+		<ol>
+			<li> Topics Control </li>
+			<li> Maintin noth </li>
+		</ol>
+	</div>
+	{/if}
 	<article class='content'>
 		{@render children()}
 	</article>
@@ -19,12 +34,54 @@
 
 	.article {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		position: relative;
 
 		min-height: 100dvh;
 
 		padding: units.$s-lg;
+	}
+
+	.toc-button {
+		display: flex;
+		position: fixed;
+
+		padding: units.$s-md;
+		margin: units.$s-md;
+		bottom: 0;
+		right: 0;
+
+		background-color: colors.$view;
+		color: colors.$on-view;
+		border: none;
+		z-index: 1;
+	}
+
+	.toc {
+		display: none;
+		flex-direction: column;
+		position: fixed;
+
+		padding: units.$s-lg;
+		margin: units.$s-lg;
+		bottom: 0;
+		right: 0;
+
+		background-color: colors.$view;
+		z-index: 2;
+
+		ol {
+			margin: 0;
+			padding: 0;
+
+			li{
+				margin: 0;
+			}
+		}
+
+		&.active {
+			display: flex;
+		}
 	}
 
 	.content {
@@ -47,7 +104,6 @@
 	}
 
 	.content :global(h2) {
-		text-align: center;
 		padding: 0;
 		margin: 0;
 		margin-bottom: 2ch;
