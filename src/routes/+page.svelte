@@ -24,11 +24,13 @@
 	title="Store"
 	description="Download and Install additional tile for Tiled Widgets."
 	color="dark"
+	link="/store"
 	aligned
 />
 <Tile
 	title="Documentation"
 	description="API and Developer documentation for developing your own tiles."
 	color="blue"
+	link="/docs"
 	aligned
 />

@@ -10,25 +10,61 @@
 		{
 			page: 'home',
 			link: '/',
-			name: 'Home'
+			name: 'Home',
+			primary: true
 		},
 		{
 			page: 'about',
 			link: '/about',
-			name: 'About'
+			name: 'About',
+			primary: true
 		},
 		{
 			page: 'download',
 			link: '/download',
-			name: 'Download'
+			name: 'Download',
+			primary: true
+		},
+		{
+			page: 'store',
+			link: '/store',
+			name: 'Store',
+			primary: false
+		},
+		{
+			page: 'docs',
+			link: '/docs',
+			name: 'Dev Docs',
+			primary: false
 		}
 	];
+
+	const primaryPages = pages.filter(page => page.primary )
+	const secondaryPages = pages.filter(page => !page.primary )
+
+	const currrentTitle = $derived(pages.find(page => page.page == currentPage) ? ": " + pages.find(page => page.page == currentPage)?.name : "" );
 </script>
+
+<svelte:head>
+	<title>TiledWidgets {currrentTitle}</title>
+</svelte:head>
 
 <div class="row container">
 	<div class="col navigation">
 		<nav class="row">
-			{#each pages as loc}
+			{#each primaryPages as loc}
+				<a href={loc.link}>
+					{loc.name}
+					{#if loc.page == currentPage}
+						<div class="positioner" in:recieve={{ key: '1' }} out:send={{ key: '1' }}></div>
+					{/if}
+				</a>
+			{/each}
+		</nav>
+	</div>
+	<div class="col navigation fixed">
+		<nav class="row">
+			{#each secondaryPages as loc}
 				<a href={loc.link}>
 					{loc.name}
 					{#if loc.page == currentPage}
@@ -75,6 +111,28 @@
 		box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
 
 		border-radius: 100vh;
+
+		&.fixed {
+			position: fixed;
+			right: 0;
+			background-color: color.adjust(colors.$view, $alpha: -0.4);
+
+			backdrop-filter: blur(10px);
+
+			a .positioner, a:visited .positioner {
+				background-color: color.adjust(colors.$accent, $hue: 100);
+			}
+		}
+
+		@media screen and (max-width: 800px) {
+			&.fixed {
+				top: calc(12pt + units.$s-sm * 7);
+				right: unset;
+				margin: auto;
+				margin-top: 0;
+				margin-right: 0;
+			}
+		}
 
 		a,
 		a:visited {
