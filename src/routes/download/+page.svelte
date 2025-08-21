@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Article from '$lib/components/Article.svelte';
+	import Overlain from '$lib/components/Overlain.svelte';
 	import Tile from '$lib/components/Tile.svelte';
 </script>
 
-<Article>
+<Overlain>
 	<h1>Download</h1>
 	<div class="row mob-col equal">
 		<Tile
@@ -36,7 +36,7 @@
 	<h2> From Source </h2>
 	<div class="details">
 		<p>If you want to test tiled screen or wants to have the latest development build, you would need to install it from the source.</p>
-<pre style='color:#cad3f5;background-color:rgba(36,39,58,0.745098);font-size: 12pt;padding: 2ch;border-radius: 0.5ch;'>
+<pre style='color:#cad3f5;background-color:rgba(36,39,58,0.745098);font-size: 12pt;padding: 2ch;border-radius: 0.5ch; overflow-x: scroll;'>
 <i><span style='color:#ee99a0;'>$</span></i><i><span style='color:#ee99a0;'>cd</span></i> path/to/save/source
 
 <i><span style='color:#ee99a0;'>$</span></i><i><span style='color:#ee99a0;'>git</span></i> clone https://github.com/kavinunethsara/tiledscreen
@@ -48,7 +48,7 @@
 <i><span style='color:#ee99a0;'>$</span></i><i><span style='color:#ee99a0;'>make</span></i> install
 </pre>
 	</div>
-</Article>
+</Overlain>
 
 <style lang="scss">
 	@use '/src/sass/units';
