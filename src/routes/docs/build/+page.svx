@@ -1,0 +1,32 @@
+# Build instructions
+
+```bash
+cd /place/you/cloned/to/
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=MYPREFIX ..
+make
+make install
+```
+
+(`MYPREFIX` is where you install your Plasma setup, replace it accordingly)
+
+Restart plasma to load the applet :
+
+in a terminal type:
+
+```bash
+kquitapp plasmashell
+```
+
+and then
+
+```bash
+plasmashell
+```
+
+or view it with
+
+```bash
+plasmoidviewer -a com.github.kavinunethsara.tiledscreen
+```

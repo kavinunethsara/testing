@@ -1,5 +1,7 @@
 @use 'sass:list';
+@use 'sass:color';
 @use 'units';
+@use 'colors';
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -20,4 +22,24 @@ p {
     font-weight: normal;
     margin: 1ch;
     font-size: 12pt;
+}
+
+blockquote {
+    display: flex;
+    flex-direction: column;
+
+    padding: units.$s-sm;
+    padding-left: units.$s-lg;
+    margin: units.$s-sm;
+
+    background-color: color.adjust(colors.$accent, $alpha: -0.75);
+    border: none;
+    border-left: units.$s-sm solid colors.$accent;
+}
+
+code:not([class*="language-"]) {
+    background-color: color.adjust(colors.$view, $lightness: +10%);
+    padding-left: 1ch;
+    padding-right: 1ch;
+    border-radius: 1ch;
 }

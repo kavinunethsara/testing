@@ -15,7 +15,7 @@
 		<Tile
 			title="Publishing Tiles"
 			description="Add your tile to the Tile Store. "
-			link="https://store.kde.org/p/2238981"
+			link="/docs/publish"
 		/>
 	</div>
 	<h2>Building From Source</h2>
@@ -24,7 +24,7 @@
 			title="Build Instructions"
 			description="Build TiledScreen from source."
 			color="green"
-			link="#plasmagetnew"
+			link="/docs/build"
 			aligned
 		/>
 	</div>

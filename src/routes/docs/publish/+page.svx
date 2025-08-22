@@ -1,0 +1,38 @@
+
+# Publishing to the Store
+
+To publish a tile to the store section of the official website, create a Pull Request on [Tiled Screen Github](https://github.com/kavinunethsara/tiledwidgets). The PR should contain,
+
+1. A file inside `/site/_tiles` folder, containing information about the tile. It should be named according to your tile ID in the format `{tileid}.markdown`. ( eg: `com.someones.tile.markdown` ). Its format is described in the [Tile Information Section](#tile-information)
+1. All images for the tile should be in a directory named the same as the tile ID inside `/assets/images/tiles/`. ( eg: `/site/assets/images/com.someones.tile/cover.png` )
+1. Images must be of the aspect ratio 16:9 and below 125KB.
+1. 6 Images are allowed in maximum
+
+### Tile Information
+
+Details for the tile are located in the `/site/_tiles` folder. For a tile with ID `com.someones.tile`, the corresponding file should be named `com.someones.tile.markdown` or `com.someones.tile.md`.
+
+ The [front matter](https://jekyllrb.com/docs/front-matter/) is expected to have the following properties.
+
+ ```yaml
+ title:  "Calendar" # The user visible name of the tiles
+ excerpt: "The plasma calendar widget as a tile" # A short description
+
+ domain: "com.github.kavinunethsara.calendar" # The tile ID.
+ thumbnail: cover.png # Thumbnail image shown in the store
+ cover: cover.png # Cover image used as the background for the tile
+ download: http://localohst/asd # Download link. A direct link is preferred,
+ images: cover.png,tile-backed.png,tile-hollow.png # Comma separated list of images to show in the details page
+
+ author: Someone # Author's name
+ email: someone@somewhere.com # Author's email
+ license: MIT license # License under which the tile is released
+ website: www.somewhere.com/tile/ # Website or Source Repository for the tiles
+ tags: calendar time date # Space separated list of tags
+
+ last-update: 2025-02-13 # Date of last update, in YYYY-MM-DD
+ published-on: 2025-02-13 # Publish date
+
+ version: 1.0 # Current version
+ ```
+The content body of the file is in Markdown. You can use it to describe your tile.

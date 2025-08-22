@@ -1,28 +1,47 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
+	import { onMount, type Snippet } from 'svelte';
 
 	const { children, contents = false }: { children: Snippet, contents?: boolean } = $props();
 	let toc: HTMLDivElement;
+	let content: HTMLElement;
 	let active: boolean = $state(false);
 
-	const toggleToc = () => {
-		active = !active;
-	}
+	onMount(() => {
+		if (!contents) return;
+		const headings = content.querySelectorAll("h2, h3");
+		headings.forEach((heading, index) => {
+			const link_name = heading.textContent?.replaceAll(" ","");
+
+			const anchor = document.createElement("a");
+			anchor.id = link_name || "";
+			heading.appendChild(anchor);
+
+			const pointer = document.createElement("a");
+			pointer.textContent = (index + 1).toString() + ". " + heading.textContent;
+			pointer.href = "#"+link_name;
+			toc.appendChild(pointer);
+		});
+	});
 </script>
 
 <div class="article">
 	<div class="background"></div>
 	<div class="overlay"></div>
 	{#if contents}
-	<button class="toc-button" onclick={toggleToc}> as </button>
+	<button class="toc-button" aria-label="Table of Contents">
+
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 13" width="4ch">
+	<path style="fill:currentColor;fill-opacity:1;stroke:none"
+			d="M 2 2 L 2 3 L 8 3 L 8 2 L 2 2 z M 11 2 L 11 3 L 12 3 L 12 5 L 11 5 L 11 6 L 14 6 L 14 5 L 13 5 L 13 3 L 14 3 L 14 2 L 11 2 z M 5 4 L 5 5 L 6 5 L 6 4 L 5 4 z M 7 4 L 7 5 L 8 5 L 8 4 L 7 4 z M 9 4 L 9 5 L 10 5 L 10 4 L 9 4 z M 2 8 L 2 9 L 6 9 L 6 8 L 2 8 z M 9 8 L 9 9 L 10 9 L 10 11 L 9 11 L 9 12 L 11 12 L 12 12 L 14 12 L 14 11 L 13 11 L 13 9 L 14 9 L 14 8 L 12 8 L 11 8 L 9 8 z M 11 9 L 12 9 L 12 11 L 11 11 L 11 9 z M 3 10 L 3 11 L 4 11 L 4 10 L 3 10 z M 5 10 L 5 11 L 6 11 L 6 10 L 5 10 z M 7 10 L 7 11 L 8 11 L 8 10 L 7 10 z "
+			class="ColorScheme-Text"
+			/>
+	</svg>
+
 	<div class={["toc", {active}]} bind:this={toc}>
-		<ol>
-			<li> Topics Control </li>
-			<li> Maintin noth </li>
-		</ol>
 	</div>
+	</button>
 	{/if}
-	<article class='content'>
+	<article class='content' bind:this={content} >
 		{@render children()}
 	</article>
 </div>
@@ -55,32 +74,36 @@
 		color: colors.$on-view;
 		border: none;
 		z-index: 1;
-	}
 
-	.toc {
-		display: none;
-		flex-direction: column;
-		position: fixed;
-
-		padding: units.$s-lg;
-		margin: units.$s-lg;
-		bottom: 0;
-		right: 0;
-
-		background-color: colors.$view;
-		z-index: 2;
-
-		ol {
-			margin: 0;
-			padding: 0;
-
-			li{
-				margin: 0;
-			}
+		&:hover .toc {
+			display: flex;
 		}
 
-		&.active {
-			display: flex;
+		.toc {
+			display: none;
+			flex-direction: column;
+			position: fixed;
+
+			padding: units.$s-md;
+			margin: units.$s-lg;
+			bottom: 0;
+			right: 0;
+
+			background-color: colors.$view;
+			z-index: 2;
+
+			:global(a) {
+				display: flex;
+
+				padding: units.$s-sm;
+
+				color: colors.$on-view;
+				text-decoration: none;
+
+				&:hover {
+					color: colors.$accent;
+				}
+			}
 		}
 	}
 
