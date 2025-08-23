@@ -8,6 +8,13 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+	interface StoreItem {
+		title: string;
+		description: string;
+		color?: string;
+		link?: string;
+	}
 }
 
 export {};
