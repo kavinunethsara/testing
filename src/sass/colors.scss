@@ -22,12 +22,12 @@ $overlay:  rgba(20, 20, 40, 0.8);
 $colors: ("dark": rgb(30, 32, 32), "light": rgb(234, 238, 241),"blue": rgb(37, 123, 221), "red": rgb(230, 12, 12), "green": rgb(18, 143, 18), "purple": rgb(143, 17, 143));
 
 @each $name, $color in $colors {
-    .bg-#{$name} {
+    :global(.bg-#{$name}) {
         background-color: $color !important;
         color: on-color($color) !important;
     }
 
-    .fg-#{$name} {
+    :global(.fg-#{$name}) {
         color: $color;
     }
 }
