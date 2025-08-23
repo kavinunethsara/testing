@@ -73,9 +73,9 @@
 		background-color: colors.$view;
 		color: colors.$on-view;
 		border: none;
-		z-index: 1;
+		z-index: 3;
 
-		&:hover .toc {
+		&:hover .toc, &:focus-within .toc {
 			display: flex;
 		}
 
@@ -90,7 +90,7 @@
 			right: 0;
 
 			background-color: colors.$view;
-			z-index: 2;
+			z-index: 4;
 
 			:global(a) {
 				display: flex;
