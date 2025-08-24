@@ -1,3 +1,6 @@
+---
+layout: docs
+---
 
 # Publishing to the Store
 

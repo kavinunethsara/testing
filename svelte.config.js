@@ -11,7 +11,10 @@ const config = {
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
-			layout: path.join(__dirname, "./src/md_layouts/docs.svelte")
+			layout: {
+				docs : path.join(__dirname, "./src/md_layouts/docs.svelte"),
+				_ : path.join(__dirname, "./src/md_layouts/tile.svelte"),
+			}
 		})
 	],
 	kit: { adapter: adapter() },

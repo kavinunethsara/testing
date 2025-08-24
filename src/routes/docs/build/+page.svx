@@ -1,3 +1,7 @@
+---
+layout: docs
+---
+
 # Build instructions
 
 ```bash
