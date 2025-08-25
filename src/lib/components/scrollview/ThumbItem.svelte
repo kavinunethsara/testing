@@ -1,14 +1,9 @@
 <script lang="ts">
-	let {
-		title,
-		description,
-		color = 'red',
-		link,
-	}: StoreItem = $props();
+	let { title, description, color = 'red', link, thumbnail }: StoreItem = $props();
 </script>
 
 <a class={['tile column', `bg-${color}`]} href={link}>
-  <img src="/tscreen.png" alt="cins" />
+	<img src={thumbnail} alt="Thumbnail for {title}" />
 	<div class="col content">
 		<h3 class="title">{title}</h3>
 		<p class="desc">{description}</p>
@@ -32,7 +27,6 @@
 
 		transition: 0.25s ease-out;
 		cursor: pointer;
-
 
 		* {
 			z-index: 2;

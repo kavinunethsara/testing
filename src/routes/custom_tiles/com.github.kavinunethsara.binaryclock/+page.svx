@@ -7,7 +7,6 @@ thumbnail: bged.png
 cover: bged.png
 official: true
 download: "https://github.com/kavinunethsara/BinaryclockTile/releases/download/v1.5.0/binaryclock.tile.zip"
-images: bged.png,outlined.png
 
 author: Kavinu Nethsara
 email: kavinunethsarakoswattage@gmail.com
@@ -26,6 +25,6 @@ version: 1.0
   import Carousel from '$lib/components/Carousel.svelte';
 </script>
 
-<Carousel images={['/tscreen.png', '/cover.webp', '/tscreen.png']} />
+<Carousel images={['/tiles/com.github.kavinunethsara.binaryclock/bged.png', '/tiles/com.github.kavinunethsara.binaryclock/outlined.png']} />
 
 A Clock that display time in binary LEDs. LED colours and visibility is fully configurable. This is based on the Binary Clock plasma widget by KDE.

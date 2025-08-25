@@ -5,18 +5,20 @@
 	const {
 		children,
 		title,
+		domain,
 		description,
 		download,
 		author,
 		license,
 		email,
+		cover,
 		publishedOn,
 		lastUpdate,
 		version
 	}: StoreItem = $props();
 </script>
 
-<Overlain>
+<Overlain image="/tiles/{domain}/{cover}">
 	<div class="flex col">
 		<div class="flex row mob-col">
 			<h1 class="title">{title}</h1>

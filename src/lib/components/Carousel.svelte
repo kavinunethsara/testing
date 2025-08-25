@@ -51,8 +51,10 @@
 		flex-direction: row;
 
 		img {
+			min-width: 100%;
 			max-width: 100%;
 			transition: 0.5s ease-in-out;
+			height: fit-content;
 
 			&.left {
 				margin-left: -100%;

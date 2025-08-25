@@ -1,13 +1,16 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 
-	const { children }: { children: Snippet, contents?: boolean } = $props();
+	const {
+		children,
+		image = '/tscreen.png'
+	}: { image: string; children: Snippet; contents?: boolean } = $props();
 </script>
 
 <div class="article">
-	<div class="background"></div>
+	<div class="background" style="background-image: url('{image}');"></div>
 	<div class="overlay"></div>
-	<div class='content'>
+	<div class="content">
 		{@render children()}
 	</div>
 </div>
@@ -73,7 +76,6 @@
 		right: 0;
 		height: 100vh;
 
-		background-image: url("/cover.webp");
 		background-size: cover;
 		background-position: center;
 		z-index: 0;
@@ -97,8 +99,11 @@
 	}
 
 	@keyframes reveal {
-		0% { background-position-y: 0vh; }
-		100% { background-position-y: -100vh; }
+		0% {
+			background-position-y: 0vh;
+		}
+		100% {
+			background-position-y: -100vh;
+		}
 	}
-
 </style>
