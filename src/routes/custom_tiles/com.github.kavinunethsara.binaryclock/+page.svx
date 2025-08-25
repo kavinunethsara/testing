@@ -15,10 +15,17 @@ license: MIT license
 website: https://github.com/kavinunethsara/BinaryclockTile/
 tags: official time date binary
 
-last-update: 2025-02-13
-published-on: 2025-02-13
+lastUpdate: 2025-02-13
+publishedOn: 2025-02-13
 
 version: 1.0
 ---
+
+
+<script lang="ts">
+  import Carousel from '$lib/components/Carousel.svelte';
+</script>
+
+<Carousel images={['/tscreen.png', '/cover.webp', '/tscreen.png']} />
 
 A Clock that display time in binary LEDs. LED colours and visibility is fully configurable. This is based on the Binary Clock plasma widget by KDE.
