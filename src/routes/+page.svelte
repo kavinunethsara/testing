@@ -15,9 +15,11 @@
 		link="/tiledscreen"
 	/>
 	<Tile
-		title="TiledTray"
-		description="A customizable widget popup that you can be transformed into almost anything."
+		title="Coming Soon"
+		description="A new tiled widget"
 		color="purple"
+		background="/tscreen.png"
+		blured
 	/>
 </div>
 <Tile

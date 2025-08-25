@@ -7,7 +7,8 @@
 		background,
 		link,
 		external = false,
-		aligned = false
+		aligned = false,
+		blured = false
 	}: {
 		title: string;
 		description: string;
@@ -17,6 +18,7 @@
 		link?: string;
 		external?: boolean;
 		aligned?: boolean;
+		blured?: boolean;
 	} = $props();
 </script>
 
@@ -31,41 +33,45 @@
 	{#if link}
 		<div class="icon next">
 			{#if !external}
-			<svg
-				width="36px"
-				height="36px"
-				stroke-width="1"
-				viewBox="0 0 24 24"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-				color="currentcolor"
-				><path
-					d="M8 12H16M16 12L12.5 8.5M16 12L12.5 15.5"
-					stroke="currentcolor"
+				<svg
+					width="36px"
+					height="36px"
 					stroke-width="1"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-				></path><path
-					d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-					stroke="currentcolor"
-					stroke-width="1"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-				></path></svg
-			>
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					color="currentcolor"
+					><path
+						d="M8 12H16M16 12L12.5 8.5M16 12L12.5 15.5"
+						stroke="currentcolor"
+						stroke-width="1"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					></path><path
+						d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+						stroke="currentcolor"
+						stroke-width="1"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					></path></svg
+				>
 			{:else}
-			<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px">
-				<!--
+				<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px">
+					<!--
 				SPDX-FileCopyrightText: 2024 Carl Schwan <carl@carlschwan.eu>
 				SPDX-License-Identifier: LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 				-->
-				<path style="fill:currentColor;fill-opacity:1;stroke:none" d="M 10.000641,8.0008275 V 10.00042 L 2.000167,10.000584 2,2.0001643 4.0000006,2.0000002 4.0000007,1 1,1.0001643 1.000167,11.000584 11.000641,11.000421 V 8.0008275 M 6.0004738,1.9999998 9.283674,2.0096898 5.4754464,5.8174465 6.1825535,6.5245535 9.990781,2.7167967 l 0.0097,3.2832027 0.999999,7e-7 -7e-6,-5 H 6.0004733" class="ColorScheme-Text" />
-			</svg>
+					<path
+						style="fill:currentColor;fill-opacity:1;stroke:none"
+						d="M 10.000641,8.0008275 V 10.00042 L 2.000167,10.000584 2,2.0001643 4.0000006,2.0000002 4.0000007,1 1,1.0001643 1.000167,11.000584 11.000641,11.000421 V 8.0008275 M 6.0004738,1.9999998 9.283674,2.0096898 5.4754464,5.8174465 6.1825535,6.5245535 9.990781,2.7167967 l 0.0097,3.2832027 0.999999,7e-7 -7e-6,-5 H 6.0004733"
+						class="ColorScheme-Text"
+					/>
+				</svg>
 			{/if}
 		</div>
 	{/if}
 	{#if background}
-		<div class="background" style="background-image: url('{background}');"></div>
+		<div class={['background', { blured }]} style="background-image: url('{background}');"></div>
 	{/if}
 </a>
 
@@ -86,6 +92,8 @@
 
 		transition: 0.25s ease-out;
 		cursor: pointer;
+
+		overflow: hidden;
 
 		* {
 			z-index: 2;
@@ -113,6 +121,10 @@
 
 			z-index: 1;
 			opacity: 0.3;
+
+			&.blured {
+				filter: blur(10px);
+			}
 		}
 	}
 
