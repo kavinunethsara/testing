@@ -153,6 +153,8 @@ The same properties exposed to the configuration view are also exposed to the Ex
 required property var tile
 required property var config
 ```
+> Starting from version 2.1, Expanded Views should persent their own close button that calls
+> `item.destory()` where item is the root element of your expanded view
 
 ### Tile configuration
 
