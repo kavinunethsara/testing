@@ -5,6 +5,7 @@
 		color = 'red',
 		direction = 'left',
 		thumbnail,
+		link,
 		aligned = true
 	}: {
 		title: string;
@@ -12,11 +13,12 @@
 		color?: string;
 		direction?: 'left' | 'right';
 		thumbnail?: string;
+		link?: string;
 		aligned?: boolean;
 	} = $props();
 </script>
 
-<div class={['tile row', `bg-${color}`, { aligned }, direction]}>
+<a class={['tile row', `bg-${color}`, { aligned }, direction]} href={link}>
 	{#if thumbnail && direction == 'left'}
 		<img src={thumbnail} class="thumbnail" alt="icon" />
 	{/if}
@@ -27,7 +29,7 @@
 	{#if thumbnail && direction == 'right'}
 		<img src={thumbnail} class="thumbnail" alt="icon" />
 	{/if}
-</div>
+</a>
 
 <style lang="scss" scoped>
 	@use 'sass:color';
@@ -45,7 +47,10 @@
 		text-decoration: none;
 
 		transition: 0.25s ease-out;
-		cursor: pointer;
+
+		&[href] {
+			cursor: pointer;
+		}
 
 		* {
 			z-index: 2;
