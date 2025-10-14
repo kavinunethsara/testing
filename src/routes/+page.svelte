@@ -7,6 +7,12 @@
 	title="Tiled Widgets"
 	subtitle="A collection of highly customizable widgets for KDE Plasma 6."
 />
+<Tile
+	title="Version 2.1 Release"
+	description="See what's new in TiledWidgets 2.1"
+	link="/changelog/"
+	color="light"
+/>
 <div class="row mob-col equal">
 	<Tile
 		title="TiledScreen"
@@ -15,11 +21,11 @@
 		link="/tiledscreen"
 	/>
 	<Tile
-		title="Coming Soon"
-		description="A new tiled widget"
+		title="TiledLauncher"
+		description="A laucher popup with a customizable tile grid."
 		color="purple"
 		background="/tscreen.png"
-		blured
+		link="/tiledlauncher"
 	/>
 </div>
 <Tile

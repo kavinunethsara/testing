@@ -64,14 +64,4 @@
 		width: max-content;
 		opacity: 0.75;
 	}
-
-	.right {
-		align-items: flex-end;
-
-		@media screen and (max-width: 600px) {
-			& {
-				align-items: flex-start;
-			}
-		}
-	}
 </style>

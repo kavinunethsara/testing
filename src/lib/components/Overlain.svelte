@@ -4,7 +4,7 @@
 	const {
 		children,
 		image = '/tscreen.png'
-	}: { image: string; children: Snippet; contents?: boolean } = $props();
+	}: { image?: string; children: Snippet; contents?: boolean } = $props();
 </script>
 
 <div class="article">

@@ -29,16 +29,3 @@
 		/>
 	</div>
 </Article>
-
-<style lang="scss">
-	@use '/src/sass/units';
-	@use '/src/sass/colors';
-	.details {
-		display: flex;
-		flex-direction: column;
-
-		padding: units.$s-lg;
-
-		background-color: colors.$view;
-	}
-</style>

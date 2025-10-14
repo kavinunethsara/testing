@@ -1,7 +1,7 @@
-import type { PageLoad } from './$types';
+import type { LayoutLoad } from './$types';
 
-export const load: PageLoad = () => {
-    return{
-        page: "docs"
-    }
-}
+export const load: LayoutLoad = () => {
+	return {
+		page: 'docs'
+	};
+};

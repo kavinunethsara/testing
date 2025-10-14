@@ -66,19 +66,19 @@
 			width: fit-content;
 		}
 
-		.background {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-
-			background-size: cover;
-			background-position: center;
-
-			z-index: 1;
-			opacity: 0.3;
-		}
+		// .background {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	right: 0;
+		// 	bottom: 0;
+		//
+		// 	background-size: cover;
+		// 	background-position: center;
+		//
+		// 	z-index: 1;
+		// 	opacity: 0.3;
+		// }
 
 		@media screen and (max-width: 800px) {
 			& {

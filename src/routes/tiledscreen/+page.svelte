@@ -3,7 +3,12 @@
 	import Header from '$lib/components/Header.svelte';
 </script>
 
-<Header title="Tiled Screen" subtitle="A Configurable Full-screen Launcher with Tiles" image="/tscreen.png" thumbnail />
+<Header
+	title="Tiled Screen"
+	subtitle="A Configurable Full-screen Launcher with Tiles"
+	image="/tscreen.png"
+	thumbnail
+/>
 
 <DetailTile
 	title="Configurable"
@@ -24,10 +29,20 @@
 />
 
 <DetailTile
-	title="Input Compatibility"
+	title="Familiar"
 	description="
-		Tiles with large touch areas allow for easy access in touch-enabled devices. Vertical scrolling, resizable tile grid cells can easily tweaked to suit a high density mouse controlled environment.
+		Start Screen was an unique feature in Windows 8/8.1. If you are one of the few who found it perfect for your taste you would feel right at home in TiledScreen.
 	"
+	color="green"
 	thumbnail="/cover.webp"
-	color="purple"
+/>
+
+<DetailTile
+	title="Download"
+	description="
+		Install TiledScreen on Plasma 6 usnig built-in Get New Widgets, or download it maually.
+	"
+	color="light"
+	direction="right"
+	link="/download"
 />
