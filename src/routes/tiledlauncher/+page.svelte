@@ -21,7 +21,7 @@
 <DetailTile
 	title="Not just a Launcher"
 	description="
-		Extensive configuration options and configurable grid allows TiledLauncher to be anything — from an Application Laucnher to a Dashboard, or even a System Tray.
+		Extensive configuration options and configurable grid allows Tiled auncher to be anything — from an Application Laucnher to a Dashboard, or even a System Tray.
 	"
 	color="dark"
 	thumbnail="/cover.webp"
@@ -29,9 +29,9 @@
 />
 
 <DetailTile
-	title="Familiar"
+	title="Stylish and Theme-able"
 	description="
-		Start Screen was an unique feature in Windows 8/8.1. If you are one of the few who found it perfect for your taste you would feel right at home in TiledScreen.
+		Tiled Launcher takes advantage of the theming capabilities of KDE Plamsa. So whatever your colour scheme and the plasma theme would be, Tiled Launcher can fit right in.
 	"
 	color="green"
 	thumbnail="/cover.webp"
@@ -40,7 +40,7 @@
 <DetailTile
 	title="Download"
 	description="
-		Install TiledScreen on Plasma 6 usnig built-in Get New Widgets, or download it maually.
+		Install Tiled Launcher on Plasma 6 usnig built-in Get New Widgets, or download it maually.
 	"
 	color="light"
 	direction="right"
