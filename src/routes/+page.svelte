@@ -24,7 +24,7 @@
 		title="TiledLauncher"
 		description="A laucher popup with a customizable tile grid."
 		color="purple"
-		background="/tscreen.png"
+		background="/fed.png"
 		link="/tiledlauncher"
 	/>
 </div>
