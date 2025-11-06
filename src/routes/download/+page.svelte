@@ -13,9 +13,16 @@
 			link="#plasmagetnew"
 		/>
 		<Tile
-			title="KDE (Pling) Store"
+			title="KDE (Pling) Store (Tiled Screen)"
 			description="Install manually. "
 			color="blue"
+			link="https://store.kde.org/p/2238981"
+			external
+		/>
+		<Tile
+			title="KDE (Pling) Store (Tiled Launcher)"
+			description="Install manually. "
+			color="light"
 			link="https://store.kde.org/p/2238981"
 			external
 		/>
