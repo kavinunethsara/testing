@@ -18,7 +18,7 @@
 	</p>
 
 	<p>
-		Source for Tiled Launcher can be found on <a href="https://github.com/kavinunethsara/tiledtray"
+		Source for Tiled Launcher can be found on <a href="https://github.com/kavinunethsara/tiledlauncher"
 			>Github ( kavinunethsara/tiledtray )
 		</a>.
 	</p>
