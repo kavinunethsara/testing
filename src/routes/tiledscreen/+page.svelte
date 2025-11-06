@@ -6,7 +6,7 @@
 <Header
 	title="Tiled Screen"
 	subtitle="A Configurable Full-screen Launcher with Tiles"
-	image="/tscreen.png"
+	image="/tscreen-dark.png"
 	thumbnail
 />
 
@@ -15,7 +15,7 @@
 	description="
 		An application launcher that adapts to your workflow. With configurable tile layout and custom tiles, your application laucnher can look and function exactly the way you want.
 	"
-	thumbnail="/cover.webp"
+	thumbnail="/tscreen-conf.png"
 />
 
 <DetailTile
@@ -24,23 +24,23 @@
 		Download costum tiles or create your own. TiledWdgets tile system allows you to create tiles that can do anything a plasmoid can right from your application launcher.
 	"
 	color="dark"
-	thumbnail="/cover.webp"
+	thumbnail="/tscreen-dark.png"
 	direction="right"
 />
 
 <DetailTile
 	title="Familiar"
 	description="
-		Start Screen was an unique feature in Windows 8/8.1. If you are one of the few who found it perfect for your taste you would feel right at home in TiledScreen.
+		Start Screen was an unique feature in Windows 8/8.1. If you are one of the few who found it perfect for your taste you would feel right at home in Tiled Screen.
 	"
 	color="green"
-	thumbnail="/cover.webp"
+	thumbnail="/tscreen-front.png"
 />
 
 <DetailTile
 	title="Download"
 	description="
-		Install TiledScreen on Plasma 6 usnig built-in Get New Widgets, or download it maually.
+		Install Tiled Screen on Plasma 6 usnig built-in Get New Widgets, or download it maually.
 	"
 	color="light"
 	direction="right"
