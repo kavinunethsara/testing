@@ -1,12 +1,13 @@
 <script lang="ts">
 	import DetailTile from '$lib/components/DetailTile.svelte';
 	import Header from '$lib/components/Header.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <Header
 	title="Tiled Screen"
 	subtitle="A Configurable Full-screen Launcher with Tiles"
-	image="/tscreen-dark.png"
+	image="{base}/tscreen-dark.png"
 	thumbnail
 />
 
@@ -15,7 +16,7 @@
 	description="
 		An application launcher that adapts to your workflow. With configurable tile layout and custom tiles, your application laucnher can look and function exactly the way you want.
 	"
-	thumbnail="/tscreen-conf.png"
+	thumbnail="{base}/tscreen-conf.png"
 />
 
 <DetailTile
@@ -24,7 +25,7 @@
 		Download costum tiles or create your own. TiledWdgets tile system allows you to create tiles that can do anything a plasmoid can right from your application launcher.
 	"
 	color="dark"
-	thumbnail="/tscreen-dark.png"
+	thumbnail="{base}/tscreen-dark.png"
 	direction="right"
 />
 
@@ -34,7 +35,7 @@
 		Start Screen was an unique feature in Windows 8/8.1. If you are one of the few who found it perfect for your taste you would feel right at home in Tiled Screen.
 	"
 	color="green"
-	thumbnail="/tscreen-front.png"
+	thumbnail="{base}/tscreen-front.png"
 />
 
 <DetailTile
@@ -44,5 +45,5 @@
 	"
 	color="light"
 	direction="right"
-	link="/download"
+	link="{base}/download"
 />

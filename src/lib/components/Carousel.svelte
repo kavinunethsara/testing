@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	let { images }: { images: Array<string> } = $props();
 	let current = $state(0);
 
@@ -12,7 +14,7 @@
 <div class="carousel">
 	<div class="container">
 		{#each images as image, key}
-			<img src={image} class={get_image_class(key)} alt="Current carousel" />
+			<img src='{base}{image}' class={get_image_class(key)} alt="Current carousel" />
 		{/each}
 	</div>
 	<div class="thumbnails">
@@ -23,7 +25,7 @@
 				}}
 			>
 				<img
-					src={image}
+					src="{base}{image}"
 					alt="Carousel image {key}"
 					class={key == current ? 'active' : 'inactive'}
 				/>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
 	import Overlain from '$lib/components/Overlain.svelte';
+	import { base } from '$app/paths';
 
 	const {
 		children,
@@ -18,7 +19,7 @@
 	}: StoreItem = $props();
 </script>
 
-<Overlain image="/tiles/{domain}/{cover}">
+<Overlain image="{base}/tiles/{domain}/{cover}">
 	<div class="flex col">
 		<div class="flex row mob-col">
 			<h1 class="title">{title}</h1>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	let {
 		title,
 		description,
@@ -24,7 +25,7 @@
 
 <a class={['tile row', `bg-${color}`, { aligned }]} href={link}>
 	{#if icon}
-		<img src="/icons/{icon}.svg" class="thumbnail" alt="icon" />
+		<img src="{base}/icons/{icon}.svg" class="thumbnail" alt="icon" />
 	{/if}
 	<div class="col content">
 		<h3 class="title">{title}</h3>

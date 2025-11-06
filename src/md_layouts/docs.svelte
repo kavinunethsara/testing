@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Snippet } from "svelte";
+  import type { Snippet } from "svelte";
   import Article from "$lib/components/Article.svelte";
 
   const { children }: { children: Snippet } = $props();

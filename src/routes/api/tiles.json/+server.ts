@@ -1,9 +1,10 @@
 import { json } from '@sveltejs/kit';
 import { basename, dirname } from 'node:path';
+import { base } from '$app/paths';
 
 export const prerender = true;
 
-const modules = import.meta.glob('/src/routes/custom_tiles/**/*.svx', {
+const modules = import.meta.glob(`/src/routes/custom_tiles/**/*.svx`, {
 	eager: true
 });
 
@@ -17,7 +18,7 @@ export const GET = () =>
 			return {
 				slug,
 				color: colors[Math.round(Math.random() * 10) % 6],
-				link: `/custom_tiles/${slug}`,
+				link: `${base}/custom_tiles/${slug}`,
 				...metadata
 			};
 		})

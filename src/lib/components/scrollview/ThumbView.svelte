@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ThumbItem from './ThumbItem.svelte';
+	import { base } from '$app/paths';
 
 	let { items }: { items: Array<StoreItem> } = $props();
 	const left = $derived(items.filter((_, index) => index % 2 == 0));
@@ -9,12 +10,12 @@
 <div class="row mob-col equal">
 	<div class="flex col">
 		{#each left as item}
-			<ThumbItem {...item} thumbnail="/tiles/{item.domain}/{item.thumbnail}" />
+			<ThumbItem {...item} thumbnail="{base}/tiles/{item.domain}/{item.thumbnail}" />
 		{/each}
 	</div>
 	<div class="flex col">
 		{#each right as item}
-			<ThumbItem {...item} thumbnail="/tiles/{item.domain}/{item.thumbnail}" />
+			<ThumbItem {...item} thumbnail="{base}/tiles/{item.domain}/{item.thumbnail}" />
 		{/each}
 	</div>
 </div>

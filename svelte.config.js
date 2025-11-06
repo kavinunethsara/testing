@@ -17,7 +17,12 @@ const config = {
 			}
 		})
 	],
-	kit: { adapter: adapter() },
+	kit: {
+		adapter: adapter(),
+		paths: {
+			base: '/tiledwidgets'
+		}
+	},
 	extensions: ['.svelte', '.svx']
 };
 

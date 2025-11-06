@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Article from '$lib/components/Article.svelte';
 	import Tile from '$lib/components/Tile.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <Article>
@@ -10,12 +11,12 @@
 			title="Writing Custom Tiles"
 			description="Create your own tiles for Tiled Widgets"
 			color="purple"
-			link="/docs/tiles"
+			link="{base}/docs/tiles"
 		/>
 		<Tile
 			title="Publishing Tiles"
 			description="Add your tile to the Tile Store. "
-			link="/docs/publish"
+			link="{base}/docs/publish"
 		/>
 	</div>
 	<h2>Building From Source</h2>
@@ -24,7 +25,7 @@
 			title="Build Instructions"
 			description="Build Tiled Screen from source."
 			color="green"
-			link="/docs/build"
+			link="{base}/docs/build"
 			aligned
 		/>
 	</div>

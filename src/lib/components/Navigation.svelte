@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { crossfade } from 'svelte/transition';
+	import { base } from '$app/paths';
 
 	let [send, recieve] = crossfade({});
 
@@ -53,7 +54,7 @@
 	<div class="col navigation">
 		<nav class="row">
 			{#each primaryPages as loc}
-				<a href={loc.link}>
+				<a href="{base}{loc.link}">
 					{loc.name}
 					{#if loc.page == currentPage}
 						<div class="positioner" in:recieve={{ key: '1' }} out:send={{ key: '1' }}></div>
@@ -65,7 +66,7 @@
 	<div class="col navigation fixed">
 		<nav class="row">
 			{#each secondaryPages as loc}
-				<a href={loc.link}>
+				<a href="{base}{loc.link}">
 					{loc.name}
 					{#if loc.page == currentPage}
 						<div class="positioner" in:recieve={{ key: '1' }} out:send={{ key: '1' }}></div>

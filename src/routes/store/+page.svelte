@@ -6,7 +6,7 @@
 	let items: Array<StoreItem> = $state([]);
 
 	onMount(async () => {
-		const results = await fetch('../api/tiles.json');
+		const results = await fetch('api/tiles.json');
 		items = await results.json();
 	})
 

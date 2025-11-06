@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import { base } from '$app/paths';
 
 	const {
 		children,
-		image = '/tscreen.png'
+		image = `${base}/tscreen.png`
 	}: { image?: string; children: Snippet; contents?: boolean } = $props();
 </script>
 

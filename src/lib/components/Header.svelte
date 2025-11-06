@@ -1,9 +1,10 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	let {
 		title = 'Title',
 		subtitle = 'Subtitle',
 		thumbnail = false,
-		image = "/cover.webp",
+		image = `${base}/cover.webp`,
 	}: { title?: string; subtitle?: string; thumbnail?: boolean; image ?: string } = $props();
 </script>
 
