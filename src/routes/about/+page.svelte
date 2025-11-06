@@ -3,12 +3,12 @@
 </script>
 
 <Article>
-	<h1>About TiledWidgets</h1>
+	<h1>About Tiled Widgets</h1>
 
 	<p>
 		Tiled widgets is a highly customizable collection of widgets for KDE Plasma 6. It uses tiles and
 		grid positioning to provide a extremely flexible user interface. Currently, the collection
-		includes TiledScreen and TiledTray.
+		includes Tiled Screen and Tiled Launcher.
 	</p>
 
 	<p>

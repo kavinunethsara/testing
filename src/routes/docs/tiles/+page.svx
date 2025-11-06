@@ -67,7 +67,7 @@ An example `metadata.json`:
 ```
 > Do not define 'height' or 'width' as configuration fileds using the defaults. This will interfere with configuration of the tiles
 
-> Following documentation is for TiledScreen V 1.x. Older API for v 0.9.x is now deprecated and may be removed from a later version. Using the older and newer APIs together can result in unwanted behavior
+> Following documentation is for Tiled Screen V 1.x. Older API for v 0.9.x is now deprecated and may be removed from a later version. Using the older and newer APIs together can result in unwanted behavior
 
 ### Tile internals
 

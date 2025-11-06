@@ -9,19 +9,19 @@
 />
 <Tile
 	title="Version 2.1 Release"
-	description="See what's new in TiledWidgets 2.1"
+	description="See what's new in Tiled Widgets 2.1"
 	link="/changelog/"
 	color="light"
 />
 <div class="row mob-col equal">
 	<Tile
-		title="TiledScreen"
+		title="Tiled Screen"
 		description="A fullscreen launcher that uses a customizable tile grid."
 		background="/tscreen.png"
 		link="/tiledscreen"
 	/>
 	<Tile
-		title="TiledLauncher"
+		title="Tiled Launcher"
 		description="A laucher popup with a customizable tile grid."
 		color="purple"
 		background="/fed.png"

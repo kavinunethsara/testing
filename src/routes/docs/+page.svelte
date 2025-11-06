@@ -8,7 +8,7 @@
 	<div class="row mob-col equal">
 		<Tile
 			title="Writing Custom Tiles"
-			description="Create your own tiles for TiledWidgets"
+			description="Create your own tiles for Tiled Widgets"
 			color="purple"
 			link="/docs/tiles"
 		/>
@@ -22,7 +22,7 @@
 	<div class="row mob-col equal">
 		<Tile
 			title="Build Instructions"
-			description="Build TiledScreen from source."
+			description="Build Tiled Screen from source."
 			color="green"
 			link="/docs/build"
 			aligned

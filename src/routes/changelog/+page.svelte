@@ -21,7 +21,7 @@
 />
 <DetailTile
 	title="Better expanded views"
-	description="Expanded views no longer open full screen in TiledScreen — instead using a popup dialog."
+	description="Expanded views no longer open full screen in Tiled Screen — instead using a popup dialog."
 	color="dark"
 	thumbnail="/networkexpanded.png"
 />

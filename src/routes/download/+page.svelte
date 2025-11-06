@@ -35,7 +35,7 @@
 		<ol>
 			<li><b>Right Click</b> on an empty space on the Desktop</li>
 			<li>Enter <i>Edit Mode -> Add or Manage Widgets -> Get New -> Download new...</i></li>
-			<li>Search for <b>TiledScreen</b></li>
+			<li>Search for <b>Tiled Screen</b></li>
 			<li>Click <i>Download</i> and select the latest version</li>
 		</ol>
 		<p>You can update widgets later using the same steps.</p>

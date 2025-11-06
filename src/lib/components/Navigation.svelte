@@ -46,7 +46,7 @@
 </script>
 
 <svelte:head>
-	<title>TiledWidgets {currrentTitle}</title>
+	<title>Tiled Widgets {currrentTitle}</title>
 </svelte:head>
 
 <div class="row container">
