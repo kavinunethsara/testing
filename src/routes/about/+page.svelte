@@ -35,7 +35,7 @@
 	<p>
 		All Tiled Widgets are Free and Open Source Software and is licensed under GNU Lesser General
 		Public License Version 2.1 or later. <code>FormIconDelegate.qml</code> by Carl Schwan
-		<a href="carl@carlschwan.eu">carl@carlschwan.eu</a>
+		<a href="mailto:carl@carlschwan.eu">carl@carlschwan.eu</a>
 		and <code>HoverOutlineEffect.qml</code> by Zren (<a href="https://github.com/Zren">Github</a>)
 		is used under the terms of their respective licenses.
 	</p>

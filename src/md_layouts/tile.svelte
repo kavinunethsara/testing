@@ -32,7 +32,7 @@
 		<div class="flex row mob-col">
 			<p class="desc">{description}</p>
 			<p class="author">
-				<a href={email}>{author}</a> : {license}
+				<a href="mailto:{email}">{author}</a> : {license}
 			</p>
 		</div>
 		<div class="flex row mob-col">

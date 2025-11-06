@@ -1,5 +1,5 @@
 import { mdsvex } from 'mdsvex';
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -21,6 +21,9 @@ const config = {
 		adapter: adapter(),
 		paths: {
 			base: '/tiledwidgets'
+		},
+		prerender: {
+			handleMissingId: 'ignore'
 		}
 	},
 	extensions: ['.svelte', '.svx']
