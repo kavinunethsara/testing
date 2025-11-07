@@ -7,7 +7,7 @@ layout: docs
 To publish a tile to the store section of the official website, create a Pull Request on [Tiled Widgets Github](https://github.com/kavinunethsara/tiledwidgets). The PR should contain,
 
 1. A folder inside `/src/routes/custom_tiles/` folder, containing information about the tile. It should be named according to your tile ID in the format `{tileid}`. ( eg: `/src/routes/custom_tiles/com.someones.tile` ). Its format is described in the [Tile Information Section](#tile-information)
-1. All images for the tile should be in the `/assets/tiles/{tileid}/` directory.
+1. All images for the tile should be in the `/static/tiles/{tileid}/` directory.
 1. Images must be of the aspect ratio 16:9 and below 125KB.
 1. 6 Images are allowed in maximum
 

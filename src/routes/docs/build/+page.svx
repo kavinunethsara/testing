@@ -5,7 +5,8 @@ layout: docs
 # Build instructions
 
 ```bash
-cd /place/you/cloned/to/
+git clone --recurse-submodules https://github.com/kavinunethsara/tiledscreen.git
+cd tiledscreen
 mkdir build
 cd build
 cmake -DCMAKE_INSTALL_PREFIX=MYPREFIX ..
