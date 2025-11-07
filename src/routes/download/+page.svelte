@@ -23,7 +23,7 @@
 			title="KDE (Pling) Store (Tiled Launcher)"
 			description="Install manually. "
 			color="light"
-			link="https://store.kde.org/p/2238981"
+			link="https://www.pling.com/p/2328139/"
 			external
 		/>
 	</div>
